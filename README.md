@@ -18,11 +18,11 @@ The ZF2 Helper provides some useful functions to speed up the development of ZF2
 Current Features:
 
 * Create a new ZF2 module which will include:
-** Module directory structure
-** Module config
-** Module Bootstrap
-** Standard template Controller
-** Standard template view file
+    * Module directory structure
+    * Module config
+    * Module Bootstrap
+    * Standard template Controller
+    * Standard template view file
 * Create a new ZF2 Controller action
 
 Installation
