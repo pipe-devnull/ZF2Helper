@@ -1,0 +1,11 @@
+/**
+ * [_ACTIONNAME_Action description]
+ *
+ * @return Zend\View\Model\ViewModel Zend View Model
+ */
+public function _ACTIONNAME_Action()
+{
+    
+    // return array ('view' => array(1, 2, 3))
+}
+

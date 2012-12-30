@@ -1,0 +1,23 @@
+{
+    "files" :
+    {
+        "/zf2-helper/Module.php.template": "/_MODULENAME_/Module.php",
+        "/zf2-helper/autoload_classmap.php.template": "/_MODULENAME_/autoload_classmap.php",
+        "/zf2-helper/controller.php.template" : "/_MODULENAME_/src/_MODULENAME_/Controller/_MODULENAME_Controller.php",
+        "/zf2-helper/module.config.php.template" : "/_MODULENAME_/config/module.config.php",
+        "/zf2-helper/view.phtml.template" :"/_MODULENAME_/view/_ROUTENAME_/_ROUTENAME_/index.phtml"
+    },
+    "directories" : 
+    [
+        "/_MODULENAME_",
+        "/_MODULENAME_/config",
+        "/_MODULENAME_/src",
+        "/_MODULENAME_/src/_MODULENAME_",
+        "/_MODULENAME_/src/_MODULENAME_/Controller",
+        "/_MODULENAME_/src/_MODULENAME_/Form",
+        "/_MODULENAME_/src/_MODULENAME_/Model",
+        "/_MODULENAME_/view/",
+        "/_MODULENAME_/view/_ROUTENAME_",
+        "/_MODULENAME_/view/_ROUTENAME_/_ROUTENAME_"
+    ]
+} 

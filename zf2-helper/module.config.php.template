@@ -1,0 +1,37 @@
+<?php
+return array(
+    'controllers' => array(
+        'invokables' => array(
+            '_MODULENAME_\Controller\_MODULENAME_' => '_MODULENAME_\Controller\_MODULENAME_Controller',
+        ),
+    ),
+
+    // The following section is new and should be added to your file
+    'router' => array(
+        'routes' => array(
+            '_ROUTENAME_' => array(
+                'type'    => 'segment',
+                'options' => array(
+                    'route'    => '/_ROUTENAME_[/:action][/:id]',
+                    'constraints' => array(
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id'     => '[0-9]+',
+                    ),
+                    'defaults' => array(
+                        'controller' => '_MODULENAME_\Controller\_MODULENAME_',
+                        'action'     => 'index',
+                        'action'     => 'search',
+                        'action'     => 'recent',
+                    ),
+                ),
+            ),
+        ),
+    ),
+
+    'view_manager' => array(
+        'template_path_stack' => array(
+            '_ROUTENAME_' => __DIR__ . '/../view',
+        ),
+    ),
+);
+?>

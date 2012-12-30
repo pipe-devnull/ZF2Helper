@@ -1,0 +1,20 @@
+<?php
+namespace _MODULENAME_\Controller;
+
+use _MODULENAME_\Model;
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
+
+class _MODULENAME_Controller extends AbstractActionController
+{
+    /**
+     * Index - _MODULENAME_
+     * 
+     * @return Zend\View\Model\ViewModel Zend View Model
+     */
+    public function indexAction()
+    {
+       
+    }
+  
+}

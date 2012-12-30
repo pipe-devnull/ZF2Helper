@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[/**
+ * ${3:undocumented action}
+ *
+ * @return <type>
+ **/
+ public function _NAME_Action()
+ {
+    return array("" => "")
+ }
+]]></content>
+    <tabTrigger>action</tabTrigger>
+    <description>Controller Action</description>
+</snippet>

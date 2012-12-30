@@ -1,0 +1,9 @@
+[
+    {"caption": "ZF2 Helper", "id":"zf2-helper",
+    "children":
+        [
+            {"command":"createmodule", "caption":"New ZF2 Module", "args": {"paths": []}},
+            {"caption": "-", "id": "side-bar-edit-open-separator" }
+        ]
+    }
+]
