@@ -37,7 +37,7 @@ clone this project directly into the SublimeText 2 packages directory.  On Linux
 How to use 
 ============
 
-_Create a new ZF2 Module_:
+__Create a new ZF2 Module__:
 
 Create an entirely new ZF2 module with 1 click rather than copying, pasting, renaming all files individually. Much quicker:)
 
@@ -45,7 +45,7 @@ Create an entirely new ZF2 module with 1 click rather than copying, pasting, ren
 - Input the name of the new module
 - Add the name of the module into the main ZF2 Application configuration file
 
-_Create a new ZF2 Controller Action:
+__Create a new ZF2 Controller Action__:
 
 Adds sample MVC action code into the controller file and created a new view file in the view directory.
 
