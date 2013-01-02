@@ -32,7 +32,6 @@ class CreatemoduleCommand(sublime_plugin.WindowCommand):
 
     # Create ZF2 Module
     def create_zf2_module_structure(self):
-        #todo - change to list in json file
         x = open(sublime.packages_path() + "/ZF2Helper/zf2-helper/files.json").read()
         x = x.replace('_MODULENAME_', self.modulename)
         x = x.replace('_ROUTENAME_', self.modulename.lower())
@@ -66,6 +65,7 @@ class CreatemoduleCommand(sublime_plugin.WindowCommand):
             f.write(zf)
             f.close()
 
+    # TODO - create additional helper class to hold this method
     def get_file_contents_as_string(self, path):
         zf = open(sublime.packages_path() + "/ZF2Helper" + path).read()
 
@@ -96,7 +96,6 @@ class CreatecontrolleractionCommand(sublime_plugin.TextCommand):
         else:
             sublime.message_dialog("not a controller")
 
-    # TODO make a generic verison
     def get_file_contents_as_string(self, path):
         zf = open(sublime.packages_path() + "/ZF2Helper" + path).read()
 
