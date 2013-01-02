@@ -1,4 +1,9 @@
 <?php
+/**
+ * Autolader config
+ * 
+ * @package _MODULENAME_
+ */
 
 return array();
 

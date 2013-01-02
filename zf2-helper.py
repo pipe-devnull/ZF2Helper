@@ -1,9 +1,7 @@
 '''
 Sublime Text 2 Zend Framework Helper Plugin
 
-- Create Template ZF2 module
-
-Author: Adrian Bruce <ade@pipe-devnull.com>
+Copyright (c) 2012 Adrian Bruce <ade@pipe-devnull.com>
 
 '''
 

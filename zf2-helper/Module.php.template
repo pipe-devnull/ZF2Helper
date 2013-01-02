@@ -1,8 +1,19 @@
 <?php
+/**
+ * Module Bootstrap
+ *
+ * @package _MODULENAME_
+ */
 namespace _MODULENAME_;
 
+/**
+ * Module Bootstrap
+ *
+ * @package _MODULENAME_
+ */
 class Module
 {
+
     public function getAutoloaderConfig()
     {
         return array(

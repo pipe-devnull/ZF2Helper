@@ -1,10 +1,19 @@
 <?php
+/**
+ * 
+ * @package _MODULENAME_
+ * 
+ */
 namespace _MODULENAME_\Controller;
 
 use _MODULENAME_\Model;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 
+/**
+ *
+ * @package _MODULENAME_
+ */
 class _MODULENAME_Controller extends AbstractActionController
 {
     /**

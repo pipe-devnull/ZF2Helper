@@ -1,4 +1,8 @@
 <?php
+/**
+ * 
+ * @package _MODULENAME_
+ */
 return array(
     'controllers' => array(
         'invokables' => array(
