@@ -118,7 +118,7 @@ class CreatecontrolleractionCommand(sublime_plugin.TextCommand):
 
         action_code = open(sublime.packages_path() + "/ZF2Helper" + "/zf2-helper/controller.action.template").read()
         action_code = action_code.replace('_ACTIONNAME_', action_name)
-        action_code = action_code.replace('_MODULENAME_', self.modulename)
+        action_code = action_code.replace('_MODULENAME_', self.module_name)
 
         # Insert the template action
         self.view.insert(self.edit, sel.end(), action_code)
