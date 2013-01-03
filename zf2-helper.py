@@ -59,20 +59,11 @@ class CreatemoduleCommand(sublime_plugin.WindowCommand):
         zf2_files = json.loads(x)
 
         for template in zf2_files['files']:
-            zf = self.get_file_contents_as_string(template)
+            zf = utility_methods.get_helper_file_contents_as_string(sublime.packages_path(), template, self.modulename)
 
             f = open(self.base_path + zf2_files['files'][template], 'w+')
             f.write(zf)
             f.close()
-
-    # TODO - create additional helper class to hold this method
-    def get_file_contents_as_string(self, path):
-        zf = open(sublime.packages_path() + "/ZF2Helper" + path).read()
-
-        zf = zf.replace('_MODULENAME_', self.modulename)
-        zf = zf.replace('_ROUTENAME_', self.modulename.lower())
-
-        return zf
 
 
 # Command to create a new action on ZF2 MVC controller
@@ -96,14 +87,6 @@ class CreatecontrolleractionCommand(sublime_plugin.TextCommand):
         else:
             sublime.message_dialog("not a controller")
 
-    def get_file_contents_as_string(self, path):
-        zf = open(sublime.packages_path() + "/ZF2Helper" + path).read()
-
-        zf = zf.replace('_MODULENAME_', self.modulename)
-        zf = zf.replace('_ROUTENAME_', self.modulename.lower())
-
-        return zf
-
     # Create the action controller view file and controller method
     def create_action(self, action_name):
         # Figure out the view file path
@@ -116,12 +99,28 @@ class CreatecontrolleractionCommand(sublime_plugin.TextCommand):
         f.write(zf)
         f.close()
 
-        action_code = open(sublime.packages_path() + "/ZF2Helper" + "/zf2-helper/controller.action.template").read()
+        action_code = utility_methods.get_helper_file_contents_as_string(sublime.packages_path(), "/zf2-helper/controller.action.template", self.module_name)
         action_code = action_code.replace('_ACTIONNAME_', action_name)
-        action_code = action_code.replace('_MODULENAME_', self.module_name)
 
         # Insert the template action
         self.view.insert(self.edit, sel.end(), action_code)
 
         # Open the newly created view file
         self.view.window().open_file(view_file)
+
+
+# Static utility methods for use in all commands
+class utility_methods():
+
+    @staticmethod
+    def get_helper_file_contents_as_string(sublime_base_path, path, module_name):
+        zf = open(sublime_base_path + "/ZF2Helper" + path).read()
+        zf = zf.replace('_MODULENAME_', module_name)
+        zf = zf.replace('_ROUTENAME_', utility_methods.get_routename_from_moduleName(module_name))
+        return zf
+
+    # Generate route name from the module name supplied
+    @staticmethod
+    def get_routename_from_moduleName(module_name):
+        # TODO take into account multiple capitals in the module name
+        return module_name.lower()
