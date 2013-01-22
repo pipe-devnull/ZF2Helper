@@ -32,7 +32,7 @@ class CreatemoduleCommand(sublime_plugin.WindowCommand):
 
     # Create ZF2 Module
     def create_zf2_module_structure(self):
-        x = open(sublime.packages_path() + "/ZF2Helper/zf2-helper/files.json").read()
+        x = open(sublime.packages_path() + "/PHP Zend Framework 2 Helper/zf2-helper/files.json").read()
         x = x.replace('_MODULENAME_', self.modulename)
         x = x.replace('_ROUTENAME_', self.modulename.lower())
 
@@ -52,7 +52,7 @@ class CreatemoduleCommand(sublime_plugin.WindowCommand):
 
     # Mapping of template to module files stored json file
     def create_files_from_helper_config(self):
-        x = open(sublime.packages_path() + "/ZF2Helper/zf2-helper/files.json").read()
+        x = open(sublime.packages_path() + "/PHP Zend Framework 2 Helper/zf2-helper/files.json").read()
         x = x.replace('_MODULENAME_', self.modulename)
         x = x.replace('_ROUTENAME_', self.modulename.lower())
 
@@ -92,7 +92,7 @@ class CreatecontrolleractionCommand(sublime_plugin.TextCommand):
         # Figure out the view file path
         view_file = self.module_base_path + "/view/" + self.module_name.lower() + "/" + self.module_name.lower() + "/" + action_name + ".phtml"
 
-        zf = open(sublime.packages_path() + "/ZF2Helper" + "/zf2-helper/view.phtml.template").read()
+        zf = open(sublime.packages_path() + "/PHP Zend Framework 2 Helper" + "/zf2-helper/view.phtml.template").read()
 
         sel = self.view.sel()[0]
         f = open(view_file, 'w+')
@@ -109,12 +109,13 @@ class CreatecontrolleractionCommand(sublime_plugin.TextCommand):
         self.view.window().open_file(view_file)
 
 
+
 # Static utility methods for use in all commands
 class utility_methods():
 
     @staticmethod
     def get_helper_file_contents_as_string(sublime_base_path, path, module_name):
-        zf = open(sublime_base_path + "/ZF2Helper" + path).read()
+        zf = open(sublime_base_path + "/PHP Zend Framework 2 Helper" + path).read()
         zf = zf.replace('_MODULENAME_', module_name)
         zf = zf.replace('_ROUTENAME_', utility_methods.get_routename_from_moduleName(module_name))
         return zf
