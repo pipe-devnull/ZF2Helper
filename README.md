@@ -7,6 +7,7 @@
                                   |_|              
 
 
+
 Introduction
 =============
 
@@ -24,14 +25,13 @@ Current Features:
     * Standard template view file
 * Create a new ZF2 Controller action
 
+More info at [pipe-devnull.com](http://pipe-devnull.com/zend-framework-2-sublimetext2-helper/ "pipe-devnull.com")
 
 Installation
 ===============
 
 
-1. Using git
-
-clone this project directly into the SublimeText 2 packages directory.  On Linux systems this can usually be found in "~/.config/sublime-text-2/Packages"
+Install via [package_control](http://wbond.net/sublime_packages/package_control "Package Control") 
 
 
 How to use 
@@ -62,18 +62,8 @@ Plugin includes additional snippets useful for ZF2 development:
 
 * New Action - tab trigger 'action'
 
-License
-===============
-
-ZF2Helper is released under the MIT license.
 
 Copyright (c) 2012 Adrian Bruce <ade@pipe-devnull.com>
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 Version
