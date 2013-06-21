@@ -1,12 +1,13 @@
 <snippet>
     <content><![CDATA[/**
- * ${3:undocumented action}
+ * ${1:undocumented action}
  *
- * @return <type>
+ * @return ${2:<type>}
  **/
-public function _NAME_Action()
+public function ${3:_NAME_}Action()
 {
-    return array("" => "")
+    ${4:return array("" => "")}
+    ${0:}
 }
 ]]></content>
     <tabTrigger>action</tabTrigger>
