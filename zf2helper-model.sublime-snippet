@@ -1,0 +1,46 @@
+<snippet>
+    <content><![CDATA[/**
+ * @package ${1:_PACKAGE_}
+ * @subpackage ${2:_SUBPACKAGE_}
+ * @author
+ * @version
+ **/
+
+namespace ${1:_PACKAGE_}\\${2:_SUBPACKAGE_};
+
+use Zend\InputFilter\InputFilter;
+use Zend\InputFilter\InputFilterAwareInterface;
+use Zend\InputFilter\InputFilterInterface;
+
+class ${3:_CLASS_} implements InputFilterAwareInterface
+{
+	/**
+	 * [exchangeArray description]
+	 * @param  array \$data [description]
+	 */
+	public function exchangeArray(\$data)
+	{
+	}
+
+	/**
+	 * [getArrayCopy description]
+	 * @return array [description]
+	 */
+	public function getArrayCopy()
+    {
+        return get_object_vars(\$this);
+    }
+
+	/**
+	 * [getInputFilter description]
+	 * @return InputFilter [description]
+	 */
+	public function getInputFilter()
+	{
+	}
+    ${0:}
+}
+]]></content>
+    <tabTrigger>zf2model</tabTrigger>
+    <description>ModelTable</description>
+</snippet>

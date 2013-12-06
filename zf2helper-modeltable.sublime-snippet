@@ -1,0 +1,98 @@
+<snippet>
+    <content><![CDATA[/**
+ * @package ${1:_PACKAGE_}
+ * @subpackage ${2:_SUBPACKAGE_}
+ * @author
+ * @version
+ **/
+
+namespace ${1:_PACKAGE_}\\${2:_SUBPACKAGE_};
+
+use Zend\Db\TableGateway\TableGateway;
+
+class ${3:_CLASS_}Table
+{
+	/**
+	 * [\$tableGateway description]
+	 * @var TableGateway
+	 */
+	protected \$tableGateway;
+
+	/**
+	 * [__construct description]
+	 * @param TableGateway \$tableGateway [description]
+	 */
+    public function __construct(TableGateway \$tableGateway)
+	{
+		\$this->tableGateway = \$tableGateway;
+	}
+
+	/**
+	 * [fetchAll description]
+	 * @return [type] [description]
+	 */
+	public function fetchAll()
+	{
+		\$resultSet = \$this->tableGateway->select();
+        
+        return \$resultSet;
+	}
+
+	/**
+	 * [get description]
+	 * @param  int \$id [description]
+	 * @return [type]     [description]
+	 */
+	public function get(\$id)
+	{
+		\$id = (int)\$id;
+		
+		\$rowset 	= \$this->tableGateway->select(array('id' => \$id));
+		\$row 		= \$rowset->current();
+		if (!\$row) {
+			throw new \Exception("Could not find row \$id");
+		}
+
+		return \$row;
+	}
+
+	/**
+	 * [save description]
+	 * @param  ${3:_CLASS_} \$item [description]
+	 * @return [type]             [description]
+	 */
+	public function save(${3:_CLASS_} \$item)
+	{
+		\$data = array(
+            
+        );
+
+        \$id = (int)\$item->id;
+        if (\$id === 0) {
+            \$return = \$this->tableGateway->insert(\$data);
+        } else {
+            if (\$this->get(\$id)) {
+                \$return = \$this->tableGateway->update(\$data, array('id' => \$id));
+            } else {
+                throw new \Exception("Could not find row \$id for update");
+             }
+        }
+
+        return \$this->tableGateway->lastInsertValue;
+	}
+
+	/**
+	 * [delete description]
+	 * @param  int \$id [description]
+	 * @return [type]     [description]
+	 */
+	public function delete(\$id)
+	{
+		\$this->tableGateway->delete(array('id' => (int)\$id));
+	}
+    ${0:}
+}
+]]></content>
+    <tabTrigger>zf2modeltable</tabTrigger>
+    <description>ModelTable</description>
+</snippet>
