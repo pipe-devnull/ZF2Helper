@@ -1,0 +1,32 @@
+<snippet>
+    <content><![CDATA[/**
+ * @package ${1:_PACKAGE_}
+ * @subpackage ${2:_SUBPACKAGE_}
+ * @author
+ * @version
+ **/
+
+namespace ${1:_PACKAGE_}\\${2:_SUBPACKAGE_};
+
+use Zend\Form\Form;
+
+class ${3:_CLASS_}Form extends Form
+{
+	public function __construct()
+	{
+		parent::__construct('${4:_FORM_NAME_}');
+
+		\$this->add(array(
+			'name' 			=> '',
+			'type' 			=> '',
+			'options' 		=> array(),
+			'attributes' 	=> array(),
+		));
+
+	    ${0:}
+	}
+}
+]]></content>
+    <tabTrigger>zf2form</tabTrigger>
+    <description>Form</description>
+</snippet>
