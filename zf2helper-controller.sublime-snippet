@@ -1,0 +1,32 @@
+<snippet>
+    <content><![CDATA[<?php
+/**
+ * @package ${1:_PACKAGE_}
+ * @subpackage ${2:_SUBPACKAGE_}
+ * @author
+ * @version
+ **/
+ 
+namespace ${1:_PACKAGE_}\Controller;
+
+use ${1:_PACKAGE_}\Model;
+use Zend\Mvc\Controller\AbstractActionController;
+use Zend\View\Model\ViewModel;
+
+class ${2:_SUBPACKAGE_}Controller extends AbstractActionController
+{
+    /**
+     * Index - ${2:_SUBPACKAGE_}
+     * 
+     * @return Zend\View\Model\ViewModel Zend View Model
+     */
+    public function indexAction()
+    {
+       
+    }
+  
+}
+]]></content>
+    <tabTrigger>zf2controller</tabTrigger>
+    <description>Controller</description>
+</snippet>

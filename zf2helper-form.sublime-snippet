@@ -1,5 +1,6 @@
 <snippet>
-    <content><![CDATA[/**
+    <content><![CDATA[<?php
+/**
  * @package ${1:_PACKAGE_}
  * @subpackage ${2:_SUBPACKAGE_}
  * @author
