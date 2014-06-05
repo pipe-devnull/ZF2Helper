@@ -103,12 +103,17 @@ class CreatecontrolleractionCommand(sublime_plugin.TextCommand):
         action_code = action_code.replace('_ACTIONNAME_', action_name)
 
         # Insert the template action
-        self.view.insert(self.edit, sel.end(), action_code)
+        self.view.run_command("insert_edit" ,{"pos":sel.end(),  "content":action_code})
 
         # Open the newly created view file
         self.view.window().open_file(view_file)
 
 
+# ST3 fix - Allow the use of edit within a TextCommand & input window
+class InsertEditCommand(sublime_plugin.TextCommand):
+
+    def run(self, edit, pos, content):
+        self.view.insert(edit, pos, content) 
 
 # Static utility methods for use in all commands
 class utility_methods():
