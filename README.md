@@ -25,7 +25,7 @@ Current Features:
     * Standard template view file
 * Create a new ZF2 Controller action
 
-More info at [pipe-devnull.com](http://pipe-devnull.com/zend-framework-2-sublimetext2-helper/ "pipe-devnull.com")
+More info at [pipe-devnull.com](http://pipe-devnull.com/2013/01/10/zend-framework-2-sublimetext2-helper.html "pipe-devnull.com")
 
 Installation
 ===============
