@@ -11,7 +11,7 @@
 Introduction
 =============
 
-Sublime Text 2 Plugin:  Zend Framework 2 (ZF2) Helper
+Sublime Text Plugin:  Zend Framework 2 (ZF2) Helper
 
 The ZF2 Helper provides some useful functions to speed up the development of ZF2 applications.  It adds options to both the side bar menu and the edit are context menu.  
 
@@ -66,12 +66,7 @@ Plugin includes additional snippets useful for ZF2 development:
 Copyright (c) 2012 Adrian Bruce <ade@pipe-devnull.com>
 
 
-Version
-===============
-
-* 0.1 - Initial release
 
 
-
-  [1]: http://www.sublimetext.com/2
+  [1]: http://www.sublimetext.com
   [2]: http://wbond.net/sublime_packages/package_control
